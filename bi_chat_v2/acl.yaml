@@ -1,0 +1,30 @@
+# Contrôle d'accès par rôle
+# Chaque rôle définit les tables autorisées
+# Le rôle est assigné par Keycloak — non modifiable par l'utilisateur
+
+roles:
+  finance:
+    allowed_tables:
+      - ecommerce.olist_orders_dataset
+      - ecommerce.olist_order_items_dataset
+      - ecommerce.olist_order_payments_dataset
+      - ecommerce.olist_products_dataset
+      - ecommerce.product_category_name_translation
+
+  marketing:
+    allowed_tables:
+      - ecommerce.olist_customers_dataset
+      - ecommerce.olist_products_dataset
+      - ecommerce.olist_sellers_dataset
+      - ecommerce.product_category_name_translation
+      - ecommerce.olist_geolocation_dataset
+
+  rh:
+    allowed_tables:
+      - rh.employees
+      - rh.departments
+      - rh.evaluations
+
+  admin:
+    allowed_tables:
+      - "*"

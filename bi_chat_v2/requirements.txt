@@ -1,0 +1,23 @@
+streamlit>=1.35
+plotly>=5.22
+pandas>=2.2
+numpy>=1.26
+
+SQLAlchemy>=2.0
+psycopg[binary]>=3.1
+
+python-dotenv>=1.0
+PyYAML>=6.0
+
+langchain>=0.2
+langchain-community>=0.2
+langchain-ollama>=0.1
+
+sqlglot>=25.0
+
+# Authentification Keycloak (pinned for compatibility)
+python-keycloak==3.3.0
+PyJWT==2.8.0
+
+# Pin setuptools to a compatible version for pkg_resources (Python 3.12+ compat)
+setuptools==65.5.0

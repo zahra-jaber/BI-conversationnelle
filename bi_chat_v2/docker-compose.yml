@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+    ports:
+      - "8180:8080"
+    networks:
+      - bi_network
+
+  
+volumes:
+  pg_data:
+
+networks:
+  bi_network:
+    driver: bridge
